@@ -8,7 +8,7 @@ then writes a provider-neutral "Model Fit" routing table to an Obsidian note.
 ```
 step 1: discover_models.py      → bulk_models_<date>.json
 step 2: check_working_models.py → working_models_list_<date>.json
-step 3: classify_models.py      → vault: "Model Fit.md"
+step 3: classify_models.py      → vault: "projectos/model-fit/Model Fit.md"
 ```
 
 Each step reads the latest output of the previous one automatically.
@@ -33,6 +33,7 @@ python3 classify_models.py --reuse-runs runs/step3_<timestamp> --merge-model git
 
 ```json
 {
+  "vault_path": "~/path/to/your/obsidian/vault/projectos/model-fit",
   "provider_whitelist": ["github-copilot", "openai"],
   "use_cases": [
     { "id": 1, "label": "programming_new_feature", "description": "Programming a new feature" }
@@ -44,6 +45,7 @@ python3 classify_models.py --reuse-runs runs/step3_<timestamp> --merge-model git
 |---|---|
 | `provider_whitelist` | Restrict step 1 discovery to these providers. Empty = all providers. |
 | `use_cases` | Task categories injected as table rows into the step 3 prompt. |
+| `vault_path` | Path to the project folder inside your Obsidian vault. Step 3 writes `Model Fit.md` into this directory. |
 
 ## Scripts
 
@@ -72,7 +74,7 @@ python3 check_working_models.py [--input FILE] [--timeout 60] [--parallel 6]
 ### `classify_models.py` — step 3
 
 Runs the master-table prompt against two models, merges both answers via a third
-model call, writes the result to the Obsidian vault note `Model Fit.md`.
+model call, writes the result to the Obsidian vault note `projectos/model-fit/Model Fit.md`.
 Raw per-model outputs are archived in `runs/step3_<timestamp>/`.
 
 ```bash
@@ -119,7 +121,7 @@ Non-interactive without `--yes` stops before step 3 to prevent unintended vault 
 | `runs/step3_<timestamp>/a_output.md` | step 3 | Raw output from model A |
 | `runs/step3_<timestamp>/b_output.md` | step 3 | Raw output from model B |
 | `runs/step3_<timestamp>/merged.md` | step 3 | Merged result before frontmatter |
-| `vault: Model Fit.md` | step 3 | Final note written to Obsidian |
+| `vault: projectos/model-fit/Model Fit.md` | step 3 | Final note written to Obsidian |
 
 ## Roadmap
 

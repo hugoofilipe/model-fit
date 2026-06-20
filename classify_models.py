@@ -240,14 +240,21 @@ def build_vault_note(merged_md: str, model_file: Path, models: list[str], merge_
     sources = " + ".join(merge_models)
     frontmatter = f"""\
 ---
-type: doc
+type: projeto
 title: "Model Fit - AI Model Selection Guide for OpenCode"
 date: "{today}"
 updated: "{today}"
-status: publicado
+status: em curso
 description: "Master table and practical guide for choosing AI models inside OpenCode for daily work. Auto-merged from {sources}."
-source_project: "drive/model-fit"
-project_path: "[Open directory](file:///home/hugoofilipe/drive/model-fit)"
+local_folder: "/home/hugoofilipe/drive/projects/model-fit"
+pessoas_relacionadas: []
+temas: []
+google_drive_folder_url: ""
+project_resume_url: ""
+calendar_event_link: ""
+calendar_event_id: ""
+calendar_slug: ""
+last_context_review: ""
 tags:
   - ai
   - opencode
