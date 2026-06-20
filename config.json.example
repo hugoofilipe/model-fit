@@ -1,0 +1,74 @@
+{
+  "vault_path": "~/path/to/your/obsidian/vault",
+  "provider_whitelist": [
+    "github-copilot",
+    "openai"
+  ],
+  "use_cases": [
+    {
+      "id": 1,
+      "label": "programming_new_feature",
+      "description": "Programming a new feature"
+    },
+    {
+      "id": 2,
+      "label": "debugging_difficult_bugs",
+      "description": "Debugging difficult bugs"
+    },
+    {
+      "id": 3,
+      "label": "large_refactors_architecture",
+      "description": "Large refactors and architecture decisions"
+    },
+    {
+      "id": 4,
+      "label": "opencode_customization",
+      "description": "Creating OpenCode commands, agents, plugins, skills, or workflows"
+    },
+    {
+      "id": 5,
+      "label": "code_review_security_performance",
+      "description": "Code review, security, performance, and risk analysis"
+    },
+    {
+      "id": 6,
+      "label": "web_research_technical_decisions",
+      "description": "Searching for recent web solutions and deciding what to do"
+    },
+    {
+      "id": 7,
+      "label": "general_technical_knowledge",
+      "description": "General technical knowledge questions"
+    },
+    {
+      "id": 8,
+      "label": "obsidian_notes_templates",
+      "description": "Exploring Obsidian notes, updating notes, and creating templates"
+    },
+    {
+      "id": 9,
+      "label": "devops_docker_automation",
+      "description": "DevOps, Docker, Tailscale, shell scripts, and local automations"
+    },
+    {
+      "id": 10,
+      "label": "quick_tasks",
+      "description": "Quick tasks: small edits, commands, summaries, simple transformations"
+    },
+    {
+      "id": 11,
+      "label": "brainstorming_macro_web",
+      "description": "Brainstorming macro ideas with web research"
+    },
+    {
+      "id": 12,
+      "label": "brainstorming_micro_web",
+      "description": "Brainstorming micro ideas with web research"
+    },
+    {
+      "id": 13,
+      "label": "updated_information_search",
+      "description": "Searching for updated information"
+    }
+  ]
+}

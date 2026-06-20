@@ -1,0 +1,17 @@
+# Personal config (contains vault path)
+config.json
+
+# Environment variables
+.env
+
+# Generated data files from pipeline runs
+bulk_models_*.json
+working_models_*.json
+
+# Step 3 run artifacts
+runs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
